@@ -23,7 +23,7 @@ class Main extends PluginBase implements Listener{
 				if(!$sender instanceof Player){
 				$sender->sendMessage("This command only works for players! Please perform this command IN GAME!");
        			}else{
- 				$sender->sendmessage("Here's your wand, ".$sender->getName()."!");
+ 				$sender->sendmessage("Here's your wand, ".$sender->getName());
  				$sender->getInventory()->addItem(Item::get(280,0,1));
 	}
 	public function onDisable(){
