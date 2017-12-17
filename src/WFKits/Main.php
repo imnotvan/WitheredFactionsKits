@@ -25,6 +25,7 @@ class Main extends PluginBase implements Listener{
        			}else{
  				$sender->sendmessage("Here's your wand, ".$sender->getName());
  				$sender->getInventory()->addItem(Item::get(280,0,1));
+		}
 	}
 	public function onDisable(){
 		$this->getLogger()->info("plugin disabled");
@@ -33,5 +34,8 @@ class Main extends PluginBase implements Listener{
 		$player = $event->getPlayer();
 		$name = $player->getName();
 		$this->getServer()->broadcastMessage(C::GREEN."Ducky Scammed the server! He's a dick!");	
+			}
+		}
+		return true;
 	}
 }
